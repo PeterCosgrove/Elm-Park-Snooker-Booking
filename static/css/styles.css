@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../../bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #333;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: -5px;
+    color: #333;
+}
+
+h4 {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.header img {
+    max-width: 90%;
+    height: auto;
+}
+
+.date-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.arrow-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background-color: #0056b3;
+}
+
+.current-date {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.date-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.date-selector input[type="date"] {
+    font-size: 1.2em;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.date-selector label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.date-selector .day-name {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+.calendars {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.calendar {
+    width: 48%;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+}
+
+.time-slots {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slot {
+    background-color: #f9f9f9; /* Default background for unbooked slots */
+    transition: background-color 0.3s ease;
+}
+
+.slot.booked {
+    background-color: #e6f7ff; /* Background for booked slots */
+}
+
+
+.slot:hover {
+    background-color: #f1f1f1;
+}
+
+.save-btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+.snooker-icon {
+    width: 50px;
+    height: 65px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+
+.slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.slot:hover {
+    background-color: #f1f1f1;
+}
+
+.slot.booked {
+    background-color: #e6f7ff;
+}
+
+.slot span {
+    flex: 1;
+    text-align: left;
+}
+
+.edit-btn,
+.delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+.slot:not(.booked) span {
+    color: #aaa; /* Gray color for empty slots */
+}
+
+
+/* Responsive Design: Stack calendars on smaller screens */
+@media (max-width: 768px) {
+    .calendars {
+        flex-direction: column; /* Stacks the tables vertically */
+        gap: 15px; /* Adjust gap for vertical layout */
+    }
+
+    .calendar {
+        width: 100%; /* Full width on smaller screens */
+    }
+}

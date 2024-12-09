@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elm Park Snooker Booking Table 1 & 2</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="logo.jpg" alt="Snooker Icon" class="snooker-icon">
+            Elm Park Snooker Booking Table 1 & 2
+        </h1>
+        <h4>(Table 3 cannot be booked)</h4>
+
+        <!-- Date Navigation -->
+        <div class="date-navigation">
+            <button id="prevDay" class="arrow-btn">&larr;</button>
+            <span id="currentDate" class="current-date"></span>
+            <button id="nextDay" class="arrow-btn">&rarr;</button>
+        </div>
+
+        <!-- Date Selector -->
+        <div class="date-selector">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date">
+            <span id="dayName" class="day-name"></span>
+        </div>
+
+        <!-- Calendars -->
+        <div class="calendars">
+            <div class="calendar" id="table1">
+                <div class="header">    
+                    <h2>Table 1</h2>
+                </div>
+                <div class="time-slots">
+                    <!-- Time slots will be dynamically added here -->
+                </div>
+            </div>
+            <div class="calendar" id="table2">
+                <div class="header">
+                    <h2>Table 2</h2>
+                </div>
+                <div class="time-slots">
+                    <!-- Time slots will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for booking input -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter Booking Name</h2>
+            <input type="text" id="bookingName" placeholder="Enter name">
+            <button id="confirmBooking">Confirm</button>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
